@@ -1,11 +1,16 @@
+library(reshape2)
+
 ## Load activity labels
 activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")[,2]
 
 ## Load data column names
 features <- read.table("./UCI HAR Dataset/features.txt")[,2]
+features = gsub('-mean', 'Mean', features)
+features = gsub('-std', 'Std', features)
+features = gsub('[-(),]', '', features)
 
 ## Subset of means and stdevs
-subset_features <- grepl("mean|std", features)
+subset_features <- grepl("Mean|Std", features)
 
 ## Load dataset function
 readData <- function(fileSubject, fileX, fileY) {
