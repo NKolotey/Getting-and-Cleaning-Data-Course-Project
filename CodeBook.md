@@ -1,11 +1,9 @@
 ## CodeBook for the tidy dataset
---------------------------------
 
 The script `run_analysis.R` performs extraction of tidy data from dataset available by this [link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 
 
-Executing the script
---------------------
+### Executing the script
 
 Before running `run_analysis.R` please ensure you have `reshape2` package installed. Then unpack data archive into working directory, the script assumes that all necessary data files available at `./UCI HAR Dataset`.
 
@@ -17,8 +15,7 @@ The script performs following actions:
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 
-Variables in the script
------------------------
+### Variables in the script
 
 To satisfy strange requirements of project I have to describe all variables used in the script:
 1. `activity_labels` stores array of all six possible activities WALKING, ..., LAYING.
